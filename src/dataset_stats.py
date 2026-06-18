@@ -23,3 +23,6 @@ print(df["Pathology"].value_counts())
 
 print("\nFirst 5 rows:")
 print(df.head())
+
+print(df["Vendor"].value_counts())
+print(df["VendorName"].value_counts())

@@ -1,0 +1,16 @@
+# Dataset
+data/
+
+# Python
+__pycache__/
+*.pyc
+
+# Outputs
+outputs/
+
+# Models
+*.pth
+*.pt
+
+# Jupyter
+.ipynb_checkpoints/

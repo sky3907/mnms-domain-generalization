@@ -1,30 +1,31 @@
 import nibabel as nib
 import numpy as np
 import torch
+
 from torch.utils.data import Dataset
 
 
 class MNMSDataset(Dataset):
 
-    def __init__(self, samples):
-        self.samples = samples
+    def __init__(self, samples, transform=None):
 
+        self.transform = transform
         self.slice_samples = []
 
         for sample in samples:
 
-            image = nib.load(sample["image_path"])
+            image = nib.load(
+                sample["image_path"]
+            ).get_fdata(dtype=np.float32)
 
-            _, _, num_slices, _ = image.shape
+            num_slices = image.shape[2]
 
             for slice_idx in range(num_slices):
 
-                self.slice_samples.append(
-                    {
-                        **sample,
-                        "slice_idx": slice_idx
-                    }
-                )
+                self.slice_samples.append({
+                    **sample,
+                    "slice_idx": slice_idx
+                })
 
     def __len__(self):
         return len(self.slice_samples)
@@ -35,11 +36,11 @@ class MNMSDataset(Dataset):
 
         image = nib.load(
             sample["image_path"]
-        ).get_fdata()
+        ).get_fdata(dtype=np.float32)
 
         mask = nib.load(
             sample["mask_path"]
-        ).get_fdata()
+        ).get_fdata(dtype=np.float32)
 
         frame_idx = sample["frame_idx"]
         slice_idx = sample["slice_idx"]
@@ -47,17 +48,34 @@ class MNMSDataset(Dataset):
         image = image[:, :, slice_idx, frame_idx]
         mask = mask[:, :, slice_idx, frame_idx]
 
-        image = image.astype(np.float32)
+        image = (
+            image - image.min()
+        ) / (
+            image.max() - image.min() + 1e-8
+        )
 
-        mean = image.mean()
-        std = image.std()
+        image = torch.tensor(
+            image,
+            dtype=torch.float32
+        ).unsqueeze(0)
 
-        if std > 0:
-            image = (image - mean) / std
+        mask = torch.tensor(
+            mask,
+            dtype=torch.float32
+        ).unsqueeze(0)
 
-        image = np.expand_dims(image, axis=0)
+        if self.transform:
 
-        image = torch.tensor(image, dtype=torch.float32)
-        mask = torch.tensor(mask, dtype=torch.long)
+            data = {
+                "image": image,
+                "mask": mask
+            }
+
+            data = self.transform(data)
+
+            image = data["image"]
+            mask = data["mask"]
+
+        mask = mask.squeeze(0).long()
 
         return image, mask

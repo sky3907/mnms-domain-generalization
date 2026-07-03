@@ -19,10 +19,10 @@ from mnms_dataset import MNMSDataset
 
 ROOT_DIR = "/content/OpenDataset"
 
-CHECKPOINT_DIR = "mnms_checkpoints"
+CHECKPOINT_DIR = "/content/drive/MyDrive/mnms_checkpoints"
 
 BATCH_SIZE = 8
-NUM_EPOCHS = 5
+NUM_EPOCHS = 10
 LR = 1e-3
 
 os.makedirs(

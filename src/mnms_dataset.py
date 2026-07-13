@@ -18,13 +18,14 @@ class MNMSDataset(Dataset):
 
         for sample in samples:
 
-            image = nib.load(
-                sample["image_path"]
-            ).get_fdata(dtype=np.float32)
-
+            img_obj = nib.load(
+              sample["image_path"]
+              )
+            image = img_obj.get_fdata(dtype=np.float32)
             mask = nib.load(
-                sample["mask_path"]
-            ).get_fdata(dtype=np.float32)
+              sample["mask_path"]
+              ).get_fdata(dtype=np.float32)
+            spacing = img_obj.header.get_zooms()[:2]
 
             frame_idx = sample["frame_idx"]
 
@@ -76,6 +77,7 @@ class MNMSDataset(Dataset):
                             "phase": sample["phase"],
                             "slice_idx": slice_idx,
                             "frame_idx": frame_idx,
+                            "spacing": spacing,
                         }
                     )
                 )
@@ -89,5 +91,6 @@ class MNMSDataset(Dataset):
         return len(self.slice_samples)
 
     def __getitem__(self, idx):
+      
 
         return self.slice_samples[idx]

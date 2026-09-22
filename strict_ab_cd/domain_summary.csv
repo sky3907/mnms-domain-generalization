@@ -1,0 +1,3 @@
+domain,N_patient_phases,Dice_LV,Dice_Myocardium,Dice_RV,HD95_LV,HD95_Myocardium,HD95_RV,Mean_Dice,Mean_HD95
+in-domain,28,0.8901,0.8095,0.839,6.7811,4.7532,7.4564,0.8462,6.3302
+unseen,40,0.8469,0.7873,0.8145,14.7279,7.7318,9.2229,0.8162,10.5609

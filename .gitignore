@@ -15,3 +15,5 @@ outputs/
 # Jupyter
 .ipynb_checkpoints/
 mnms_checkpoints/
+# Detailed per-slice failure figures
+strict_ab_cd/failure_analysis/*/slice_*.png

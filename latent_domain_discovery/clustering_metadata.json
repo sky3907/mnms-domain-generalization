@@ -1,0 +1,40 @@
+{
+    "protocol": "Latent-domain discovery on frozen A/B source-training split",
+    "seed": 42,
+    "n_patient_phase_volumes": 240,
+    "n_patients": 120,
+    "candidate_k": [
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "selected_k": 2,
+    "k_selection_rule": "maximum silhouette score",
+    "pca_variance_threshold": 0.95,
+    "pca_components_95": 3,
+    "pca_explained_variance": 0.9660848719660773,
+    "feature_columns": [
+        "intensity_mean",
+        "intensity_std",
+        "p01",
+        "p05",
+        "p25",
+        "p75",
+        "p95",
+        "p99",
+        "skewness",
+        "kurtosis",
+        "entropy"
+    ],
+    "normalization": "1st-99th percentile clipping followed by per-volume median/IQR normalization",
+    "clustering_unit": "patient-phase volume",
+    "vendor_centre_used_for_clustering": false,
+    "ed_es_same_cluster_patients": 119,
+    "ed_es_different_cluster_patients": 1,
+    "ed_es_consistency_percentage": 99.16666666666667,
+    "frozen_scaler": "latent_domain_discovery/style_scaler.joblib",
+    "frozen_pca": "latent_domain_discovery/style_pca.joblib",
+    "frozen_kmeans": "latent_domain_discovery/style_kmeans.joblib"
+}

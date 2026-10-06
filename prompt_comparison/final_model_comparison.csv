@@ -1,0 +1,4 @@
+model,AB_reference_mean_dice,AB_reference_mean_hd95,CD_unseen_mean_dice,CD_unseen_mean_hd95,dice_change_AB_to_CD,hd95_change_AB_to_CD,CD_dice_delta_vs_source,CD_hd95_improvement_vs_source,CD_dice_delta_vs_generic,CD_hd95_improvement_vs_generic
+source_only,0.8462,6.3315,0.8162,10.5591,-0.03,4.2276,0.0,0.0,-0.0026,3.2631
+generic_prompt,0.8421,10.9761,0.8189,13.8222,-0.0232,2.8461,0.0026,-3.2631,0.0,0.0
+latent_domain_prompt,0.8498,5.3299,0.8261,8.6762,-0.0238,3.3463,0.0098,1.8829,0.0072,5.146

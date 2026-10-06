@@ -1,0 +1,17 @@
+{
+    "protocol": "Frozen A/B source training with internal A/B model selection",
+    "source_only_reference_checkpoint": "/content/drive/MyDrive/mnms_checkpoints_strict_ab_cd_seed42/best_model.pth",
+    "prompt_mechanism": "Learned prompt embedding expanded spatially and concatenated with the input MRI as constant prompt channels",
+    "prompt_dim": 4,
+    "num_prompt_embeddings": 2,
+    "generic_prompt": "All samples use prompt ID 0",
+    "latent_domain_prompt": "Samples use frozen latent-domain cluster ID 0 or 1",
+    "latent_assignment_pipeline": "Frozen StandardScaler + PCA + KMeans fit only on A/B training data",
+    "c_d_used_for_training_or_model_selection": false,
+    "batch_size": 8,
+    "epochs": 10,
+    "learning_rate": 0.001,
+    "loss": "DiceCELoss",
+    "optimizer": "Adam",
+    "seed": 42
+}

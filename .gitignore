@@ -17,3 +17,8 @@ outputs/
 mnms_checkpoints/
 # Detailed per-slice failure figures
 strict_ab_cd/failure_analysis/*/slice_*.png
+
+# Model checkpoints / fitted binary artifacts
+*.pth
+*.pt
+*.joblib

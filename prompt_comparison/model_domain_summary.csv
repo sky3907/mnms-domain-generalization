@@ -1,0 +1,7 @@
+model,domain,N_patient_phases,Dice_LV,Dice_Myocardium,Dice_RV,HD95_LV,HD95_Myocardium,HD95_RV,Mean_Dice,Mean_HD95
+generic_prompt,in-domain,28,0.888,0.7964,0.8418,9.8697,8.1101,14.9485,0.8421,10.9761
+generic_prompt,unseen,40,0.8427,0.7896,0.8242,12.5802,10.616,18.2704,0.8189,13.8222
+latent_domain_prompt,in-domain,28,0.9043,0.8025,0.8427,4.5567,4.0251,7.408,0.8498,5.3299
+latent_domain_prompt,unseen,40,0.8586,0.7929,0.8266,8.6386,7.3893,10.0007,0.8261,8.6762
+source_only,in-domain,28,0.8901,0.8095,0.839,6.7811,4.7532,7.4602,0.8462,6.3315
+source_only,unseen,40,0.8469,0.7873,0.8145,14.7279,7.7318,9.2175,0.8162,10.5591

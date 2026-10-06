@@ -1,0 +1,21 @@
+{
+    "evaluation_protocol": "Frozen A/B source training -> official validation A/B reference and C/D unseen-vendor evaluation",
+    "models": [
+        "source_only",
+        "generic_prompt",
+        "latent_domain_prompt"
+    ],
+    "source_checkpoint": "/content/drive/MyDrive/mnms_checkpoints_strict_ab_cd_seed42/best_model.pth",
+    "generic_prompt_checkpoint": "/content/drive/MyDrive/mnms_prompt_baselines_seed42/generic_prompt/best_model.pth",
+    "latent_domain_prompt_checkpoint": "/content/drive/MyDrive/mnms_prompt_baselines_seed42/latent_domain_prompt/best_model.pth",
+    "latent_assignment": "Frozen A/B-trained StandardScaler + PCA + KMeans; transform/predict only",
+    "latent_k": 2,
+    "prompt_dim": 4,
+    "generic_prompt_id": 0,
+    "c_d_used_for_training": false,
+    "c_d_used_for_checkpoint_selection": false,
+    "c_d_used_for_latent_pipeline_fitting": false,
+    "segmentation_preprocessing": "Per-slice min-max normalization and resize to 256x256",
+    "evaluation_geometry": "Predictions resized to native in-plane resolution and reconstructed as full 3D patient-phase volumes",
+    "hd95_spacing": "Original NIfTI voxel spacing"
+}

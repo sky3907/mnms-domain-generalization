@@ -1,0 +1,3 @@
+variant,prompt_mode,best_epoch,best_internal_ab_mean_dice,best_model_path
+generic_prompt,generic,10,0.8790247205889535,/content/drive/MyDrive/mnms_prompt_baselines_seed42/generic_prompt/best_model.pth
+latent_domain_prompt,latent,10,0.8842809373006139,/content/drive/MyDrive/mnms_prompt_baselines_seed42/latent_domain_prompt/best_model.pth

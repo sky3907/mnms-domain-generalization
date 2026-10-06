@@ -1,0 +1,4 @@
+model,Dice_LV,Dice_Myocardium,Dice_RV,HD95_LV,HD95_Myocardium,HD95_RV
+source_only,0.8469,0.7873,0.8145,14.7279,7.7318,9.2175
+generic_prompt,0.8427,0.7896,0.8242,12.5802,10.616,18.2704
+latent_domain_prompt,0.8586,0.7929,0.8266,8.6386,7.3893,10.0007

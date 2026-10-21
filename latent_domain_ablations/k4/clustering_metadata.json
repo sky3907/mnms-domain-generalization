@@ -1,0 +1,39 @@
+{
+  "selected_k": 4,
+  "seed": 42,
+  "n_init": 20,
+  "feature_columns": [
+    "intensity_mean",
+    "intensity_std",
+    "p01",
+    "p05",
+    "p25",
+    "p75",
+    "p95",
+    "p99",
+    "skewness",
+    "kurtosis",
+    "entropy"
+  ],
+  "pca_components_95": 3,
+  "scaler_and_pca_refitted": false,
+  "vendor_centre_used_for_clustering": false,
+  "silhouette": 0.3207659501768631,
+  "davies_bouldin": 1.0414851888266403,
+  "cluster_sizes": [
+    75,
+    55,
+    56,
+    54
+  ],
+  "ed_es_same_cluster_patients": 112,
+  "source_input_sha256": {
+    "features": "a8ff8981d364a872cbd4bdb2d6749a262eb8c655af92884ee71e78d6c1e92ae4",
+    "metadata": "1f627f9e5c4fcbc694e63ec49501d7e7d3865986311fb4cbd62e7428cf4ab4df",
+    "scaler": "a04b25ec14b76c13d17d5f961678c6dee88dd525e0657c667873dbb10347d35a",
+    "pca": "e18cbd3d2c44bb157bef7bf2c83deae5278cceec54153bfd18f8510f45786076",
+    "kmeans_k2": "99e479e3221e172ce028181b20c957af1a1ae138a04610a70b5c60607a773e41",
+    "split": "f3613e56eb8218c9a99c68af064ff2f0c6da7fba882b0245b9b68c50e147a0a9"
+  },
+  "sklearn_version": "1.6.1"
+}

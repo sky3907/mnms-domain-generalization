@@ -1,0 +1,31 @@
+{
+  "experiment": "K=2 soft input-prompt routing",
+  "seed": 42,
+  "batch_size": 8,
+  "epochs": 10,
+  "learning_rate": 0.001,
+  "loss": "DiceCELoss",
+  "optimizer": "Adam",
+  "prompt_dim": 4,
+  "num_prompts": 2,
+  "routing": "softmax(-squared_centroid_distance / temperature)",
+  "temperature": 19.085058554412406,
+  "temperature_rule": "Median absolute squared-distance gap on A/B training",
+  "feature_columns": [
+    "intensity_mean",
+    "intensity_std",
+    "p01",
+    "p05",
+    "p25",
+    "p75",
+    "p95",
+    "p99",
+    "skewness",
+    "kurtosis",
+    "entropy"
+  ],
+  "pca_components": 3,
+  "split_path": "strict_ab_cd/source_split.json",
+  "checkpoint_selection": "Internal A/B global foreground-class mean Dice",
+  "c_d_used_for_training_or_tuning": false
+}

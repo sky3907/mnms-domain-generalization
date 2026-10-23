@@ -1,0 +1,32 @@
+{
+  "seed": 42,
+  "k": 4,
+  "prompt_dim": 4,
+  "batch_size": 8,
+  "epochs": 10,
+  "learning_rate": 0.001,
+  "variant": "soft_prompt_k4_recovery",
+  "routing": "softmax(-squared_centroid_distance / temperature)",
+  "temperature": 6.73277070806852,
+  "temperature_rule": "median(second_nearest_d2 - nearest_d2) on A/B training volumes",
+  "feature_columns": [
+    "intensity_mean",
+    "intensity_std",
+    "p01",
+    "p05",
+    "p25",
+    "p75",
+    "p95",
+    "p99",
+    "skewness",
+    "kurtosis",
+    "entropy"
+  ],
+  "pca_components": 3,
+  "loss": "DiceCELoss",
+  "optimizer": "Adam",
+  "initialization": "from scratch",
+  "checkpoint_selection": "internal A/B pooled Dice",
+  "c_d_used_for_training_or_tuning": false,
+  "hard_reference_best_dice": 0.8787197445644028
+}

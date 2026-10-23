@@ -1,0 +1,2 @@
+variant,best_epoch,best_internal_ab_mean_dice,epochs_completed,best_model_path
+hard_prompt_k4_recovery,10,0.8787197445644028,10,/content/drive/MyDrive/mnms_hard_prompt_k4_recovery_seed42/best_model.pth

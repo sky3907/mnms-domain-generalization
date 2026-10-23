@@ -1,0 +1,33 @@
+{
+  "variant": "hard_prompt_k4_recovery",
+  "seed": 42,
+  "k": 4,
+  "routing": "hard",
+  "prompt_dim": 4,
+  "batch_size": 8,
+  "epochs": 10,
+  "learning_rate": 0.001,
+  "optimizer": "Adam",
+  "loss": "DiceCELoss",
+  "pca_components": 3,
+  "feature_columns": [
+    "intensity_mean",
+    "intensity_std",
+    "p01",
+    "p05",
+    "p25",
+    "p75",
+    "p95",
+    "p99",
+    "skewness",
+    "kurtosis",
+    "entropy"
+  ],
+  "training_patients": 120,
+  "internal_val_patients": 30,
+  "training_volumes": 240,
+  "internal_val_volumes": 60,
+  "c_d_used_for_training": false,
+  "c_d_used_for_model_selection": false,
+  "cluster_source": "/content/mnms-domain-generalization/latent_domain_ablations/k4"
+}

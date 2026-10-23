@@ -1,0 +1,2 @@
+variant,best_epoch,best_internal_ab_mean_dice,epochs_completed,temperature,best_model_path
+soft_prompt_k4_recovery,10,0.8782168426461873,10,6.73277070806852,/content/drive/MyDrive/mnms_soft_prompt_k4_recovery_seed42/best_model.pth

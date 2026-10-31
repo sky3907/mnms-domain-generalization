@@ -1,0 +1,2 @@
+model,seed,epochs_completed,best_epoch,best_dice,complete
+latent_domain_prompt,44,30,28,0.8897125926514127,True

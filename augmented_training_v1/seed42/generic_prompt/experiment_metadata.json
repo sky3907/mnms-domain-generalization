@@ -1,0 +1,21 @@
+{
+  "protocol": "Frozen A/B training and internal A/B validation",
+  "max_epochs": 30,
+  "min_epochs": 15,
+  "patience": 8,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "prompt_dim": 4,
+  "augmentation": "Rotation +/-10 degrees; scale 0.95-1.05; translation +/-4%; contrast 0.9-1.1; brightness +/-0.08; Gaussian noise 0.015",
+  "checkpoint_selection": "Internal A/B pooled foreground Dice",
+  "c_d_used_for_training_or_tuning": false,
+  "input_sha256": {
+    "strict_ab_cd/source_split.json": "f3613e56eb8218c9a99c68af064ff2f0c6da7fba882b0245b9b68c50e147a0a9",
+    "latent_domain_discovery/clustering_metadata.json": "1f627f9e5c4fcbc694e63ec49501d7e7d3865986311fb4cbd62e7428cf4ab4df",
+    "latent_domain_discovery/source_cluster_assignments.csv": "a8e5ca137fcb1da0a38e02869fc3bbf469b4ff15090275692a44df5c48a8702e",
+    "prompt_baselines/internal_ab_validation_cluster_assignments.csv": "dee715bc138205c9999c709fa3827f9329a9b218bb02da351ff980c0c916ddfe"
+  },
+  "script_sha256": "d4ecf0595a9b26eb1a2ca0c5e966c00c121762c5c0b720c8a1e711c6e5575939",
+  "variant": "generic_prompt",
+  "seed": 42
+}

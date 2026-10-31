@@ -1,0 +1,13 @@
+model,vendor,Dice_LV,HD95_LV,Dice_Myocardium,HD95_Myocardium,Dice_RV,HD95_RV,Mean_Dice,Mean_HD95
+source_only,D,20,20,20,20,20,20,20,20
+generic_prompt,D,20,20,20,20,20,20,20,20
+latent_domain_prompt,D,20,20,20,20,20,20,20,20
+source_only,B,20,20,20,20,20,20,20,20
+generic_prompt,B,20,20,20,20,20,20,20,20
+latent_domain_prompt,B,20,20,20,20,20,20,20,20
+source_only,C,20,20,20,20,20,20,20,20
+generic_prompt,C,20,20,20,20,20,20,20,20
+latent_domain_prompt,C,20,20,20,20,20,20,20,20
+source_only,A,8,8,8,8,8,8,8,8
+generic_prompt,A,8,8,8,8,8,8,8,8
+latent_domain_prompt,A,8,8,8,8,8,8,8,8

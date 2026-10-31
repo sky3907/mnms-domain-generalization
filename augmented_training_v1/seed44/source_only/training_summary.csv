@@ -1,0 +1,2 @@
+model,seed,epochs_completed,best_epoch,best_dice,complete
+source_only,44,30,25,0.8925066088472879,True

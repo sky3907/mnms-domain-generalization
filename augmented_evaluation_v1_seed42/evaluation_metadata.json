@@ -1,0 +1,19 @@
+{
+  "description": "Frozen augmented seed42 checkpoints; official validation evaluation",
+  "checkpoint_selection": "Internal A/B only; no C/D tuning or selection",
+  "inference_source": "/content/mnms-domain-generalization/src/evaluate_prompt_comparison.py",
+  "inference_source_sha256": "89f26613089bfff6d218f0d4f761fce86ef3f6718b191dc55469ea8b377cf868",
+  "training_script_sha256": "d4ecf0595a9b26eb1a2ca0c5e966c00c121762c5c0b720c8a1e711c6e5575939",
+  "checkpoint_sha256": {
+    "source_only": "06292a676fe2dc100cfe9b03fe4b01b9cd72a18ec0991d2a88a001843cc44685",
+    "generic_prompt": "97ae5f5c6a713f65901735a5fbf45954a5dadd6f518fa32f8fd1db7b803a0953",
+    "latent_domain_prompt": "9aef344ece62ddd32da21da51280f00d0e45f7d3b3b118cb54da2889380f7e03"
+  },
+  "metric_policy": "Original evaluator compute_volume_metrics; NaNs excluded in means",
+  "samples_per_vendor": {
+    "D": 20,
+    "B": 20,
+    "C": 20,
+    "A": 8
+  }
+}

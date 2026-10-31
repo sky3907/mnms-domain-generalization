@@ -1,0 +1,2 @@
+model,seed,epochs_completed,best_epoch,best_dice,complete
+generic_prompt,44,20,12,0.8851085068787978,True
